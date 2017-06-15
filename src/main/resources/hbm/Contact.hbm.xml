@@ -3,20 +3,6 @@
         "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
 
 <hibernate-mapping>
-    <!--
-    <class name="com.devcolibri.entity.User" table="user" catalog="test">
-        <id name="userId" type="java.lang.Integer">
-            <column name="USER_ID" />
-            <generator class="identity" />
-        </id>
-        <property name="firstName" type="string">
-            <column name="FIRST_NAME" length="20" not-null="true" unique="true" />
-        </property>
-        <property name="lastName" type="string">
-            <column name="LAST_NAME" length="20" not-null="true" unique="true" />
-        </property>
-    </class>
-    -->
     <class name="com.mycompany.phonebook.model.Contacts" table="contacts" catalog="phonebook">
             <id name="contact_id" type="java.lang.Integer">
                     <column name="contact_id" />
@@ -27,6 +13,36 @@
             </property>
             <property name="organization" type="string">
                     <column name="organization" length="45" not-null="false" unique="false" />
+            </property>
+            <property name="group" type="string">
+                    <column name="group" length="30" not-null="false" unique="false" />
+            </property>
+            <property name="mobile_number" type="string">
+                <column name="mobile_number" length="20" not-null="false" unique="false" />
+            </property>
+            <property name="office_number" type="string">
+                <column name="office_number" length="20" not-null="false" unique="false" />
+            </property>
+            <property name="home_number" type="string">
+                <column name="home_number" length="20" not-null="false" unique="false" />
+            </property>
+            <property name="fax_number" type="string">
+                <column name="fax_number" length="20" not-null="false" unique="false" />
+            </property>
+            <property name="email" type="string">
+                <column name="email" length="25" not-null="false" unique="false" />
+            </property>
+            <property name="web" type="string">
+                <column name="web" length="25" not-null="false" unique="false" />
+            </property>
+            <property name="other_cont" type="string">
+                <column name="other_cont" length="25" not-null="false" unique="false" />
+            </property>
+            <property name="other_cont2" type="string">
+                <column name="other_cont2" length="25" not-null="false" unique="false" />
+            </property>
+            <property name="adress" type="string">
+                <column name="adress" length="70" not-null="false" unique="false" />
             </property>
     </class>
 </hibernate-mapping>
